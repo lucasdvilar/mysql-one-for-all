@@ -5,9 +5,8 @@ CREATE DATABASE SpotifyClone;
 CREATE TABLE SpotifyClone.plans (
 	id INT PRIMARY KEY AUTO_INCREMENT,
     `type` VARCHAR(50) NOT NULL,
-    price DOUBLE NOT NULL
+    price DECIMAL(3, 2) NOT NULL
 );
-
 
 CREATE TABLE SpotifyClone.users (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -57,7 +56,7 @@ CREATE TABLE SpotifyClone.`history` (
 );
 
 INSERT INTO SpotifyClone.plans (`type`, price) VALUES
-	('Gratuito', 0),
+	('Gratuito', 0.00),
 	('Familiar', 7.99),
 	('Universitário', 5.99),
 	('Pessoal', 6.99);
